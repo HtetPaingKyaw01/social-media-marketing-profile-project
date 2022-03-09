@@ -1,11 +1,21 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 
+*{
+    font-family: 'Roboto', sans-serif;
 }
 
 .site-nav{
-
+    position: absolute;
+    top: 0;
 }
 
 .site-logo{
     width: 150px;
+}
+
+.home{
+    background-image: url(../img/bg-Shape.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50%;
 }
