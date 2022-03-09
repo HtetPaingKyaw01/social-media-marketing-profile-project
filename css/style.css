@@ -4,6 +4,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    height: 500vh;
+}
+
 .site-nav{
     position: absolute;
     top: 0;
@@ -18,4 +22,21 @@
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 50%;
+}
+
+.about-us{
+    background-image: url(../img/bg-2.svg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.about{
+    background-color: #7E76F915;
+}
+
+
+@media screen and (max-width: 576px){
+    .content-2-img,.content-2-text{
+        width: 100% !important;
+    }
 }
