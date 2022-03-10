@@ -34,9 +34,32 @@ body{
     background-color: #7E76F915;
 }
 
+.services{
+    background-image: url(../img/bg-3.svg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.services-card{
+    border: none;
+    border-radius: 35px;
+}
+
+.services-des{
+    height: 200px !important;
+}
+
+.services-img{
+    height: 90px !important;
+}
+
 
 @media screen and (max-width: 576px){
     .content-2-img,.content-2-text{
         width: 100% !important;
     }
+}
+
+@media screen and (max-width: 768px){
+    
 }
