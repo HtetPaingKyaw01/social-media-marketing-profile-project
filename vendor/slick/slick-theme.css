@@ -145,7 +145,7 @@
   opacity: 1;
 }
 
-.slick-dots li button:before {
+/* .slick-dots li button:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -160,7 +160,7 @@
   opacity: 0.25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 .slick-dots li.slick-active button:before {
   color: black;

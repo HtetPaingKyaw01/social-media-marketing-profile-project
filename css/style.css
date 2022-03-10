@@ -46,11 +46,39 @@ body{
 }
 
 .services-des{
-    height: 200px !important;
+    height: 150px !important;
 }
 
 .services-img{
     height: 90px !important;
+}
+
+.pricing{
+    background-color: #7E76F915;
+}
+
+.slick-width{
+    margin: 0 10px !important;
+}
+
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent;
+    border: 2px solid #7E76F9;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active{
+    width: 15px !important;
+    height: 15px !important;
+    background-color: #7E76F9;
 }
 
 
@@ -60,6 +88,8 @@ body{
     }
 }
 
-@media screen and (max-width: 768px){
-    
+@media screen and (max-width: 1400px){
+    .services-des{
+        height: 190px !important;
+    }
 }
