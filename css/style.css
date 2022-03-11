@@ -5,7 +5,7 @@
 }
 
 body{
-    height: 600vh;
+    
 }
 
 .site-nav{
@@ -18,14 +18,14 @@ body{
 }
 
 .home{
-    background-image: url(../img/bg-Shape.svg);
+    background-image: url("../img/bg-Shape.svg");
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 50%;
 }
 
 .about-us{
-    background-image: url(../img/bg-2.svg);
+    background-image: url("../img/bg-2.svg");
     background-size: 100%;
     background-position: center;
 }
@@ -35,7 +35,7 @@ body{
 }
 
 .services{
-    background-image: url(../img/bg-3.svg);
+    background-image: url("../img/bg-3.svg");
     background-size: 100%;
     background-position: center;
 }
@@ -79,6 +79,13 @@ body{
     width: 15px !important;
     height: 15px !important;
     background-color: #7E76F9;
+}
+
+.footer{
+    background-image: url("../img/footer-1.svg"),url("../img/footer-2.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 150px 0 50px 0;
 }
 
 
