@@ -214,7 +214,7 @@
 
       this.defaults = {
         boxClass: 'wow',
-        animateClass: 'animated',
+        animateClass: 'cssanimation',
         offset: 0,
         mobile: true,
         live: true,

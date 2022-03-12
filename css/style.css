@@ -4,8 +4,40 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    
+    overflow-x: hidden;
+}
+
+.ani-delay-1{
+    animation-delay: 0.5s;
+}
+
+.ani-delay-2{
+    animation-delay: 1s;
+}
+
+.ani-delay-3{
+    animation-delay: 1.5s;
+}
+
+.ani-delay-4{
+    animation-delay: 2s;
+}
+
+.ani-delay-5{
+    animation-delay: 2.5s;
+}
+
+.ani-delay-6{
+    animation-delay: 3s;
+}
+
+.ani-delay-7{
+    animation-delay: 3.5s;
 }
 
 .site-nav{
@@ -22,6 +54,34 @@ body{
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 50%;
+}
+
+.social-v{
+    position: absolute;
+    bottom: 150px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stick{
+    width: 5px;
+    height: 25px;
+}
+
+.scroll-to-next{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-us{
@@ -43,6 +103,10 @@ body{
 .services-card{
     border: none;
     border-radius: 35px;
+}
+
+.services-card:hover{
+    
 }
 
 .services-des{
@@ -88,15 +152,22 @@ body{
     padding: 150px 0 50px 0;
 }
 
-
 @media screen and (max-width: 576px){
     .content-2-img,.content-2-text{
         width: 100% !important;
+    }
+    .footer{
+        background-size: cover;
+        background-position: center;
+        padding: 250px 0 50px 0 !important;
     }
 }
 
 @media screen and (max-width: 1400px){
     .services-des{
         height: 190px !important;
+    }
+    footer{
+        padding: 130px 0 0 0 !important;
     }
 }
