@@ -9,4 +9,11 @@ $(window).scroll(function(){
     };
 });
 
+$(".navbar-toggler").click(function(){
+    if($(".menu-icon").hasClass("fa-bars")){
+        $(".menu-icon").removeClass("fa-bars").addClass("fa-close");
+    }else{
+        $(".menu-icon").removeClass("fa-close").addClass("fa-bars");
+    }
+});
     

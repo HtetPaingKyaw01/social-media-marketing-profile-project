@@ -50,11 +50,29 @@ body{
     position: fixed;
     background-color: white !important;
     box-shadow: 0 0 5px #00000020;
+    animation: d 1s linear;
+}
+
+@keyframes d{
+    from{
+        transform: translateY(-200px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
 .nav-scroll .nav-text-scroll{
     color: black !important;
     font-weight: bold !important;
+}
+
+.nav-scroll .nav-text-scroll:hover{
+    color: var(--bs-primary) !important;
+}
+
+.navbar-toggler:focus{
+    outline: none;
 }
 
 .site-logo{
@@ -172,6 +190,26 @@ body{
         background-size: cover;
         background-position: center;
         padding: 250px 0 50px 0 !important;
+    }
+    .site-nav{
+        background-color: white;
+    }
+    .menu-icon{
+        color: var(--bs-primary) !important;
+        font-size: 1.7rem;
+    }
+    .nav-text-scroll{
+        color: black !important;
+        font-weight: bold;
+    }
+    .nav-item{
+        margin: 5px;
+    }
+    .social-v{
+        display: none;
+    }
+    .scroll-to-next{
+        display: none;
     }
 }
 
