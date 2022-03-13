@@ -46,6 +46,10 @@ body{
     z-index: 3000;
 }
 
+.nav-link.current-section{
+    border-bottom: 3px solid white;
+}
+
 .nav-scroll{
     position: fixed;
     background-color: white !important;
@@ -68,6 +72,11 @@ body{
 }
 
 .nav-scroll .nav-text-scroll:hover{
+    color: var(--bs-primary) !important;
+}
+
+.nav-scroll .nav-link.current-section{
+    border-bottom: 3px solid var(--bs-primary);
     color: var(--bs-primary) !important;
 }
 
