@@ -43,6 +43,18 @@ body{
 .site-nav{
     position: absolute;
     top: 0;
+    z-index: 3000;
+}
+
+.nav-scroll{
+    position: fixed;
+    background-color: white !important;
+    box-shadow: 0 0 5px #00000020;
+}
+
+.nav-scroll .nav-text-scroll{
+    color: black !important;
+    font-weight: bold !important;
 }
 
 .site-logo{
