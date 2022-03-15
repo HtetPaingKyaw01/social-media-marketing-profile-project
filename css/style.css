@@ -109,6 +109,14 @@ body{
     height: 25px;
 }
 
+.social-v a{
+    transition: 0.5s;
+}
+
+.social-v a:hover{
+    transform: scale(1.5);
+}
+
 .scroll-to-next{
     position: absolute;
     bottom: 50px;
@@ -142,10 +150,13 @@ body{
 .services-card{
     border: none;
     border-radius: 35px;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%) !important;
 }
 
 .services-card:hover{
-    
+    transform: scale(0.98);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
 }
 
 .services-des{
@@ -190,6 +201,16 @@ body{
     background-size: 100%;
     padding: 150px 0 50px 0;
 }
+
+.social-icon a{
+    transition: 0.5s;
+}
+
+.social-icon a:hover{
+    transform: scale(1.5);
+}
+
+
 
 @media screen and (max-width: 576px){
     .content-2-img,.content-2-text{

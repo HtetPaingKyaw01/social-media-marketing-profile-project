@@ -2,10 +2,11 @@ let screenHeigh = $(window).height();
 
 $(window).scroll(function(){
     let currentPosition = $(this).scrollTop();
-    if(currentPosition > screenHeigh -100){
+    if(currentPosition > screenHeigh-100){
         $(".site-nav").addClass("nav-scroll");
     }else{
         $(".site-nav").removeClass("nav-scroll");
+        setActive("home");
     };
 });
 
@@ -17,46 +18,81 @@ $(".navbar-toggler").click(function(){
     }
 });
 
-var waypoints = $('#home').waypoint(function(direction) {
-    console.log("a"); 
+function setActive(current){
     $(".nav-link").removeClass("current-section");
-    $(".nav-link[href='#home']").addClass("current-section");
-  }, {
-    offset: '25%'
-});
+    $(`.nav-link[href='#${current}']`).addClass('current-section');
+}
 
-var waypoints = $('#about').waypoint(function(direction) {
-    console.log("b"); 
-    $(".nav-link").removeClass("current-section");
-    $(".nav-link[href='#about']").addClass("current-section");
+function navScroll(){
+    let currentSection = $("section[id]");
+    currentSection.waypoint(function(direction){
+        if(direction == "down"){
+            let currentSectionId = $(this.element).attr("id");
+            console.log(currentSectionId);
+            setActive(currentSectionId);
+        };
+    },{ offset:'100px' });
 
-  }, {
-    offset: '25%'
-});
+    currentSection.waypoint(function(direction){
+        if(direction == "up"){
+            let currentSectionId = $(this.element).attr("id");
+            console.log(currentSectionId);
+            setActive(currentSectionId);
+        };
+    },{ offset:'-5px' });
+}
 
-var waypoints = $('#services').waypoint(function(direction) {
-    console.log("c"); 
-    $(".nav-link").removeClass("current-section");
-    $(".nav-link[href='#services']").addClass("current-section");
+navScroll();
 
-  }, {
-    offset: '25%'
-});
-
-var waypoints = $('#pricing').waypoint(function(direction) {
-    console.log("d"); 
-    $(".nav-link").removeClass("current-section");
-    $(".nav-link[href='#pricing']").addClass("current-section");
-
-  }, {
-    offset: '25%'
-});
-
-var waypoints = $('#contact').waypoint(function(direction) {
-    console.log("e"); 
-    $(".nav-link").removeClass("current-section");
-    $(".nav-link[href='#contact']").addClass("current-section");
-
-  }, {
-    offset: '25%'
-});
+var wow = new WOW(
+        {
+          boxClass:     'wow',      // animated element css class (default is wow)
+          animateClass: 'cssanimation.css', // animation css class (default is animated)
+          offset:       0,          // distance to the element when triggering the animation (default is 0)
+          mobile:       true,       // trigger animations on mobile devices (default is true)
+          live:         true,       // act on asynchronously loaded content (default is true)
+          callback:     function(box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
+          },
+          scrollContainer: null,    // optional scroll container selector, otherwise use window,
+          resetAnimation: true,     // reset animation on end (default is true)
+        }
+      );
+      new WOW().init();
+      $(".pricing-slide").slick({
+          arrows:false,
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          responsive: [
+              {
+                  breakpoint: 1400,
+                  settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: true,
+                      dots: true
+                  }
+              },
+              {
+                  breakpoint: 800,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2
+                  }
+              },
+              {
+                  breakpoint: 480,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+          ]
+      });
