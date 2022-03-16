@@ -96,3 +96,9 @@ var wow = new WOW(
               // instead of a settings object
           ]
       });
+
+      $(window).on("load",function(){
+        $(".loader-container").fadeOut(500,function(){
+            $(this).remove();
+        });
+      })
